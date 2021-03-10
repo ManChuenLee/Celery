@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>SmallN'Local: User Account Page</title>
+  <meta name="author" content="Man Chuen Lee">
+  <meta name="description" content="COMP 1800">
+
+  <!-- Bootstrap for Mobile-first, and JQuery -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+
+  <!-- Optional styles and scripts of your own -->
+  <style>
+    #tabs {
+      margin-top: 5%;
+      margin-left: 3%;
+    }
+
+
+    #bodyContainer {
+      border: 2px solid greenyellow;
+      margin-left: 3%;
+      margin-right: 3%;
+      padding-top: 1%;
+    }
+
+    #welcomeText {
+      text-align: center;
+      font-size: 25pt;
+      font-weight: bold;
+    }
+
+    #gridTemplate {
+      display: grid;
+      grid-template-columns: 50% 50%;
+    }
+
+    #gridRecentSales {
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+
+    #gridAccountSummary {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      padding-left: 5%;
+    }
+
+    #recentSalesText {
+      font-size: 18pt;
+      font-weight: bold;
+      margin-left: 2.5%;
+    }
+
+    #recentSalesTable {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 20px 1.5em;
+    }
+
+    #accountSummaryTable {
+      width: 100%;
+      font-weight: bold;
+    }
+
+    #accountSummaryText {
+      font-size: 18pt;
+      font-weight: bold;
+    }
+
+    #recentSalesContainer {
+      background-color: #DCDCDC;
+      padding: 2.5%;
+    }
+
+    #accountSummaryContainer {
+      background-color: #DCDCDC;
+      padding: 2.5%;
+    }
+
+    #tipsAndTricksContainer {
+      background-color: #DCDCDC;
+      padding: 2.5%;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-------------------------------------->
+  <!-- The following is HTML for layout -->
+  <!-------------------------------------->
+
+  <!-- Header Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Small N' Local</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Best Sellers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">New Releases</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              On Sales
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" size="120">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <div id="tabs">
+    <a class="btn btn-success" href="#" role="button">Home</a>
+    <button class="btn btn-success" type="button">Manage Inventory</button>
+    <input class="btn btn-success" type="button" value="Orders">
+    <input class="btn btn-success" type="button" value="Profile">
+    <input class="btn btn-success" type="button" value="Emails">
+  </div>
+
+
+
+
+
+
+
+
+
+  <div id="bodyContainer">
+
+
+
+    <p id="welcomeText">Welcome to your Account Page</p>
+
+    <div id="gridTemplate">
+      <div id="gridRecentSales">
+
+        <div id="recentSalesContainer">
+
+          <p id="recentSalesText">Your Recent Sales:</p>
+
+          <table id="recentSalesTable">
+            <tr>
+              <th>Product
+                <hr class="my-4">
+              </th>
+              <th>Transaction Date
+                <hr class="my-4">
+              </th>
+              <th>Amount
+                <hr class="my-4">
+              </th>
+              <th>Profit
+                <hr class="my-4">
+              </th>
+            </tr>
+            <tr>
+              <td>Custom Clay Pots</td>
+              <td>20-January-2021</td>
+              <td>3</td>
+              <td>$30.00</td>
+            </tr>
+            <tr>
+              <td>Hand-Crafted Jewelry</td>
+              <td>16-January-2021</td>
+              <td>7</td>
+              <td>$7.00</td>
+            </tr>
+            <tr>
+              <td>5-Scented Candles</td>
+              <td>10-January-2021</td>
+              <td>2</td>
+              <td>$10.00</td>
+            </tr>
+            <tr>
+              <td>Hand-Knitted Pajamas</td>
+              <td>09-January-2021</td>
+              <td>1</td>
+              <td>$15.00</td>
+            </tr>
+            <tr>
+              <td>Woven Basket</td>
+              <td>07-January-2021</td>
+              <td>2</td>
+              <td>$12.00</td>
+            </tr>
+            <tr>
+              <td>Clay Bracelets</td>
+              <td>05-January-2021</td>
+              <td>8</td>
+              <td>$20.00</td>
+            </tr>
+          </table>
+
+        </div>
+
+      </div>
+      <div id="gridAccountSummary">
+        <div id="accountSummaryContainer">
+          <p id="accountSummaryText">Your Account Summary:</p>
+
+          <table id="accountSummaryTable">
+            <tr>
+              <td>Last Active Login:</td>
+              <td>7 days ago</td>
+            </tr>
+            <tr>
+              <td>Last Ordered Fullfilled</td>
+              <td>7 days ago</td>
+            </tr>
+            <tr>
+              <td>Emails waiting for response:</td>
+              <td> 4</td>
+            </tr>
+          </table>
+        </div>
+        </br>
+        <div id="tipsAndTricksContainer">
+          <p style="font-size: 18pt; font-weight: bold;">Tips and Tricks</p>
+          <div><img src="packaging.png" style="width:10%; float:left" alt="Image might have been moved">
+            <p>Learning packaging tips to ensure your product dets to your customers safely while saving money</p>
+          </div>
+          </br>
+          <div><img src="pickup truck.png" style="width:10%; float:left" alt="Image might have been moved">
+            <p>Want faster deliveries? Come check out this list of trusted courier companies to improve you and your
+              customers shopping experience</p>
+          </div>
+          </br>
+          <div><img src="life savers.png" style="width:10%; float:left" alt="Image might have been moved">
+            <p>Feel like your drowning in orders and debt? Come see our life-saving business articles that cna help you
+              swim to the shore of success!</p>
+          </div>
+        </div>
+        </br>
+      </div>
+    </div>
+  </div>
+
+  </br>
+  </br>
+  </br>
+  </br>
+</br>
+</br>
+</br>
+</br>
+
+
+
+  <!-- Below is for the footer -->
+
+
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright:
+    <a class="text-dark" href="https://mdbootstrap.com/">SmallN'Local.com</a>
+  </div>
+  <!-- Copyright -->
+  </footer>
+
+
+
+
+  <!----------------------------------------------->
+  <!-- JS: Boostrap, Firebase, API related    -->
+  <!----------------------------------------------->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+
+  <!--------------------------------------------------------------------->
+  <!-- JS files: Your own JavaScript functions included here    -->
+  <!--------------------------------------------------------------------->
+
+</body>
+
+</html>
